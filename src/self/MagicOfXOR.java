@@ -11,7 +11,7 @@ public class MagicOfXOR {
         System.out.println(i+" "+j);
     }
     public static void findMissionNumber(){
-         int ars[]=new int[]{1,4,3,5,7,9,8,6};
+         int ars[]=new int[]{0,2,3};
          int xorOf1to9=0;
         int xorOfAllArrayElement=0;
         for (int i = 0; i <= 9; i++) {
@@ -21,12 +21,27 @@ public class MagicOfXOR {
             xorOfAllArrayElement= xorOfAllArrayElement^ars[i];
         }
 
+
+        //cancel out all othr number except the mission one
         System.out.println(xorOf1to9^xorOfAllArrayElement);
+
+
+
+
+    }
+    public int missingNumberBest(int[] nums) {
+        int xorOfNumber = nums.length;
+        for (int i = 0; i < nums.length; i++) {
+            xorOfNumber =xorOfNumber^ i^nums[i];
+        }
+        return xorOfNumber;
+
     }
 
     public static void main(String[] args) {
         System.out.println(5^9);
         findMissionNumber();
+
 
 
     }
