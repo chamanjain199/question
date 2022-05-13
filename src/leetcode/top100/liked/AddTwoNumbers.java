@@ -86,14 +86,13 @@ public class AddTwoNumbers {
     }
     public static void main(String[] args) {
 
-        ListNode l1 = new ListNode(2);
-        l1.next = new ListNode(4);
-        l1.next.next = new ListNode(3);
-        ListNode l2 = new ListNode(5);
-        l2.next = new ListNode(6);
-        l2.next.next = new ListNode(4);
-        int startDate= LocalDateTime.now().getSecond();
-        ListNode ln= addTwoNumbers2(l1, l2);
+        ListNode l1 = new ListNode(4);
+        l1.next = new ListNode(5);
+//        l1.next.next = new ListNode(3);
+        ListNode l2 = new ListNode(3);
+        l2.next = new ListNode(4);
+        l2.next.next = new ListNode(5);
+        ListNode ln= addTwoNumbers(l1, l2);
 
         while (ln!=null){
             System.out.println(ln.val);
