@@ -1,18 +1,26 @@
 package leetcode.top100.liked;
 
 public class ListNode {
-    int val;
-    ListNode next;
+    public  int val;
+    public ListNode next;
 
-    ListNode() {
+    public ListNode() {
     }
 
-    ListNode(int val) {
+    public ListNode(int val) {
         this.val = val;
     }
 
-    ListNode(int val, ListNode next) {
+    public ListNode(int val, ListNode next) {
         this.val = val;
         this.next = next;
+    }
+
+    public static void print(ListNode node){
+        if(node==null){
+            return;
+        }
+        System.out.println(node.val);
+        print(node.next);
     }
 }

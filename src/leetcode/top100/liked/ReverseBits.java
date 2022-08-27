@@ -30,10 +30,17 @@ public class ReverseBits {
                 ans |= 1 << 31 - i;
         return ans;
     }
-
+    static Long reversedBits(Long X) {
+        long ans = 0;
+        for (long i = 0; i < 32; ++i)
+            if (((X >> i) & 1L) == 1) {
+                ans |= (1L << (31 - i));
+            }
+        return ans;
+    }
     public static void main(String[] args) {
 
-        System.out.println(reverseBits2(-3));
+        System.out.println(reversedBits(1L));
 
     }
 }
