@@ -15,7 +15,7 @@ public class FindMissingAndRepeating {
 //        for (int i = 1; i < arr.length; i++) {  //XOR all array eleemt
 //            xor = xor ^ arr[i];
 //        }
-//        for (int i = 1; i <=arr.length; i++) {  // no cancel out single present element
+//        for (int i = 1; i <=arr.length; i++) {  // number cancel out single present element
 //            xor = xor ^ i;
 //        }
 
