@@ -23,7 +23,7 @@ public class ReversePair {
 
 
     public static int merge(int left, int mid, int right, int[] arr) {
-        int lenLeft = mid - left + 1;
+        int lenLeft = mid - left + 1; //mid is the last element of first sorted array, so it is included in left array (1,4,3) || will male [1,4] and [3] two sorted array
         int lenRight = right - mid;
         int count = 0;
 
@@ -62,6 +62,8 @@ public class ReversePair {
 
     public static void main(String[] args) {
         System.out.println(reversePairs(new int[]{2,4,3,5,1
+        }));
+        System.out.println(reversePairs(new int[]{1,5,7
         }));
     }
 }

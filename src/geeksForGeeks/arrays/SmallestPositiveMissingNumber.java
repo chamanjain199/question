@@ -23,7 +23,7 @@ public class SmallestPositiveMissingNumber {
         for (int i = 0; i < size; ) {
             if (arr[i] > 0 && arr[i] <= size) {
                 if (arr[i] != (i+1) ) {
-                    if(arr[i] ==arr[arr[i]-1]){
+                    if(arr[i] ==arr[arr[i]-1]){ // avoid duplicate numbers
                            arr[i]=0;
                            i++;
                     }

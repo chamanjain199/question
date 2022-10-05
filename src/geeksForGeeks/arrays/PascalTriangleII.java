@@ -1,9 +1,7 @@
 package geeksForGeeks.arrays;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public class PascalTriangleII {
@@ -23,7 +21,7 @@ public class PascalTriangleII {
         return ans;
     }
 
-    public static List<Integer> getRowOptimalMost(int k) {
+    public static List<Integer> getRowOptimal1(int k) {
         Integer[] arr = new Integer[k + 1];
         Arrays.fill(arr, 0);
         arr[0] = 1;
@@ -64,6 +62,6 @@ public class PascalTriangleII {
 
 
     public static void main(String[] args) {
-        System.out.println(getRowOptimalMost(6));
+        System.out.println(getRowOptimal(6));
     }
 }

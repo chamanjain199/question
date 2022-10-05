@@ -18,11 +18,12 @@ public class MaximumSubSequenceOfSizeK {
         int len = nums.length;
         int maxSum = 0;
 
-        for (int i = 0; i < k; i++) {
+        for (int i = 0; i < k; i++) { //prepare a window of size k
             maxSum += nums[i];
         }
         for (int i = k; i < len; i++) {
-            maxSum = Math.max(maxSum, maxSum - nums[i - k] + nums[i]);
+           int nextWindow= maxSum - nums[i - k] + nums[i]; // add current and subtract last element
+            maxSum = Math.max(maxSum,nextWindow );
         }
 
         return maxSum;

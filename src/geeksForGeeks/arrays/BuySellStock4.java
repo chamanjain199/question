@@ -18,9 +18,6 @@ public class BuySellStock4 {
                 allProfits[i] = A[i] - A[i - 1];
 
         }
-
-
-
         Arrays.sort(allProfits);
         System.out.println(Arrays.toString(allProfits));
 

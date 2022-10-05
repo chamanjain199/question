@@ -1,6 +1,7 @@
 package geeksForGeeks.arrays;
 
 public class LongestTurbulentSubarray {
+    //consecutive even odd
     public static int maxTurbulenceSize(int[] arr) {
         boolean isPreEleEven = (arr[0] & 1) == 0;
         int len = arr.length;

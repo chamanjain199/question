@@ -3,7 +3,7 @@ package geeksForGeeks.arrays;
 public class MaximumOccuredInteger {
     //https://practice.geeksforgeeks.org/batch/dsa-4/track/DSASP-Arrays/problem/maximum-occured-integer4602
     public static int maxOccured(int L[], int R[], int n, int maxx) {
-        int arrayWithSum[] = new int[maxx + 2];
+        int arrayWithSum[] = new int[maxx + 2]; // doing +2 because +1 because 0 based indexing and +1 for   arrayWithSum[R[i]+1]--; marking  -1 for next to last range
         for (int i = 0; i < n; i++) {
             arrayWithSum[L[i]]++;
             arrayWithSum[R[i]+1]--;
@@ -18,8 +18,6 @@ public class MaximumOccuredInteger {
             }
         }
         return res;
-
-
     }
 
     public static void main(String[] args) {

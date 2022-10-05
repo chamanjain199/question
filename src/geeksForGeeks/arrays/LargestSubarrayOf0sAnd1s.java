@@ -25,6 +25,7 @@ public class LargestSubarrayOf0sAnd1s {
     }
 
     public static void main(String[] args) {
+        //largest subarray with equal 1 and 0
         System.out.println(maxLen(new int[]{1,1,1,0,0}, 0));
     }
 }

@@ -1,7 +1,7 @@
 package geeksForGeeks.arrays;
 
 import java.util.Arrays;
-
+//Dividend = Divisor x Quotient + Remainder
 public class RearrangeArrayAlternately {
     public static void rearrange(long arr[], int n) {
         int maxIndex = n - 1;
@@ -33,6 +33,9 @@ public class RearrangeArrayAlternately {
         long[] arr = {1, 2, 3, 4, 5, 6};
         rearrange(arr, 6);
 
+        System.out.println(Arrays.toString(arr));
+       arr = new long[]{1, 2, 3, 4, 5, 6};
+        rearrangeNextQuestionSol(arr, 6);
         System.out.println(Arrays.toString(arr));
 
     }

@@ -11,6 +11,8 @@ public class SubarrayWith0Sum {
         }
         map.put(arr[0], 1);
         for (int i = 1; i < n; i++) {
+
+
             arr[i] += arr[i - 1];
             if(arr[i]==0){
                 return true;

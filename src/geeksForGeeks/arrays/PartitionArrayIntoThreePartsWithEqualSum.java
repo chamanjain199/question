@@ -27,9 +27,8 @@ public class PartitionArrayIntoThreePartsWithEqualSum {
                 if (requiredSum == 0 && count == 3) {
                     return true;
                 }
-                requiredSum = requiredSum * 2;
-            }
-        }
+                requiredSum += requiredSum ;
+            }        }
         return false;
     }
 
