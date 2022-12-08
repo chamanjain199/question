@@ -2,18 +2,14 @@ package geeksForGeeks.searching;
 
 public class KthElementOfTwoSortedArrays {
     public static long kthElement(int arr1[], int arr2[], int n, int m, int k) {
-
         if (n <= m) {
             return kthElementBinarySearch(arr1, arr2, n, m, k);
         } else {
             return kthElementBinarySearch(arr2, arr1, m, n, k);
         }
-
-
     }
 
     public static long kthElementBinarySearch(int arr1[], int arr2[], int n, int m, int k) {
-
         int cut1;
         int cut2;
         int l1;
@@ -43,8 +39,8 @@ public class KthElementOfTwoSortedArrays {
     }
 
     public static void main(String[] args) {
-        int arr1[]=new int[]{2,5};
-        int arr2[]=new int[]{3,4};
+        int[] arr1 =new int[]{2,5};
+        int[] arr2 =new int[]{3,4};
         System.out.println(kthElement(arr1,arr2,arr1.length,arr2.length,2));
     }
 }

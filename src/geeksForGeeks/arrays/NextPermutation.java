@@ -12,8 +12,6 @@ public class NextPermutation {
             swap(firstLowerIndex,toReplace,nums);
         }
         reverse(firstLowerIndex+1,nums.length-1,nums);
-
-
     }
 
     public static void swap(int i, int j, int[] nums) {

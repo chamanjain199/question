@@ -8,12 +8,13 @@ public class SearchInRotatedSortedArray {
             }else{
                 return -1;
             }
+
         }
         int low = 0;
         int high = nums.length - 1;
         int mid;
         while (low <= high) {
-            mid = (low + high) / 2;
+            mid = (low + high) >>1;
             if (nums[mid] == target) {
                 return mid;
             }

@@ -28,7 +28,7 @@ public class FindTheDuplicateNumber {
 
     public static int findDuplicateWithoutModifingArray(int[] nums) {
         int slow = nums[0];
-        int faste = nums[0];
+        int  faste = nums[0];
         do {
             slow = nums[slow];
             faste = nums[nums[faste]];

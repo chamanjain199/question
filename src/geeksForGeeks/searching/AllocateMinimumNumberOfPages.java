@@ -51,7 +51,7 @@ public class AllocateMinimumNumberOfPages {
         int mid;
         int res = 0;
         while (low <= high) {
-            mid = low + (high - low) / 2;
+            mid = (low + high) >> 1;
             if (isFeasible(A, mid, M)) {
                 res = mid;
                 high = mid - 1;

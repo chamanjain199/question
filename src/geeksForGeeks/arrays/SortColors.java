@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class SortColors {
     public static void sortColors(int[] nums) {
+
         int low = 0;
         int high = nums.length;
         int mid = 0;
