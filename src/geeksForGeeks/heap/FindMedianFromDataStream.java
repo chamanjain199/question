@@ -16,11 +16,16 @@ public class FindMedianFromDataStream {
     }
 
     public void addNumOptimized(int num) {
-        if (maxHeap.isEmpty() || num <= maxHeap.peek()) {
+        if (maxHeap.isEmpty() || num <= maxHeap.peek()) {  //put smaller number in max heap  because to find median we need max from smaller numbers
             maxHeap.add(num);
         } else {
-            minHeap.add(num);
+            minHeap.add(num);   // put greater number in min heap because to find median we need min from greater numbers
         }
+
+        //ex [10,20,30,40]
+        // from greater 30,40  be need min ( that is 30)
+        // from smaller number 10, 20 we need max (that is 20)
+
 
 
 
