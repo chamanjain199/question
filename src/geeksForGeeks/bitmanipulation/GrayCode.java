@@ -37,12 +37,6 @@ public class GrayCode {
 
     }
 
-    static int getGray(int n) {
-
-        return n^(n>>1);
-
-
-    }
 
     public static void main(String[] args) {
         System.out.println(grayCode(4));

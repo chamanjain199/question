@@ -308,6 +308,6 @@ public class AddBinary {
 
     public static void main(String[] args) {
 
-        System.out.println(addBinary("11", "1"));
+        System.out.println(addBinary("011", "011"));
     }
 }

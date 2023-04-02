@@ -2,8 +2,8 @@ package geeksForGeeks.bitmanipulation;
 
 import java.util.Arrays;
 
-public class FindMaximumXOR {
-    public int findMaximumXOR(int[] nums) {
+public class FindMinimumXOR {
+    public int findMinimumXOR(int[] nums) {
 
         Arrays.sort(nums);
         int min=Integer.MAX_VALUE;

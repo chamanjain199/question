@@ -68,7 +68,7 @@ public class BitwiseANDOfNumbersRange {
     public static void main(String[] args) {
 
 
-        System.out.println(rangeBitwiseAndSuperOptimized(5
-                ,7));
+        System.out.println(rangeBitwiseAndSuperOptimized(1
+                ,2147483647));
     }
 }
