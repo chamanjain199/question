@@ -1,42 +1,83 @@
 package geeksForGeeks.recurtion;
 
+import java.util.Arrays;
+
 public class PredictTheWinner {
 
-    public static boolean PredictTheWinner(int[] nums) {
-        long playerOneScore = 0L;
-        long playerTwoScore = 0L;
-        int start = 0;
-        int end = nums.length - 1;
-        boolean isFirstPlayerTurn=true;
-        while (start < end) {
+    int dp[][];
 
-
-
-
-
+    public boolean PredictTheWinner(int[] nums) {
+        int len = nums.length;
+        if ((len & 1) == 0) {
+            return true;
         }
-        return false;
+        dp = new int[len][len];
+        for (int[] dp1 : dp) {
+            Arrays.fill(dp1, -1);
+        }
+        int total = 0;
+        for (int i = 0; i < len; i++) {
+            total += nums[i];
+        }
+        int one = predictTheWinnerHelper(nums, 0, len - 1);
+        int two = total - one;
+        return one >= two;
+
     }
 
-    private void maxOfPlayerOne(int[] nums, int turn, int start, int end) {
-
-
-        if (start == end) {
-            return;
+    public boolean PredictTheWinnerDP(int[] nums) {
+        int len = nums.length;
+        if ((len & 1) == 0) {
+            return true;
         }
-        if (turn == 1) {
-
-            //int a=nums[start]+maxOfPlayerOne(nums,turn*-1,start+1,end);
-
-
-        } else {
-
+        int total = 0;
+        for (int num : nums) {
+            total += num;
         }
+        dp = new int[len][len];
+        for (int g = 0; g < len; g++) {
+            for (int i = 0, j = g; j < len; i++,j++) {
+                if (g == 0) {
+                    dp[i][j] = nums[i];
+                } else if (g == 1) {
+                    dp[i][j] = Math.max(nums[i], nums[j]);
+                } else {
+                    dp[i][j] = Math.max(nums[i] +
+                                    Math.min(dp[i + 2][j],
+                                            dp[i + 1][j - 1]),
+                            nums[j] + Math.min(dp[i + 1][j - 1],
+                                    dp[i][j - 2]));
+                }
+            }
+        }
+        int one = dp[0][len - 1];
+        int two = total - one;
+        return one >= two;
     }
+
+    public int predictTheWinnerHelper(int[] nums, int s, int e) {
+        if (s == e) {
+            return nums[s];
+        }
+        if (s >= nums.length || e < 0) {
+            return 0;
+        }
+        if (dp[s][e] != -1) {
+            return dp[s][e];
+        }
+        return dp[s][e] = Math.max(nums[s] +
+                        Math.min(predictTheWinnerHelper(nums, s + 2, e),
+                                predictTheWinnerHelper(nums, s + 1, e - 1)),
+                nums[e] + Math.min(predictTheWinnerHelper(nums, s + 1, e - 1),
+                        predictTheWinnerHelper(nums, s, e - 2)));
+
+    }
+
 
     public static void main(String[] args) {
-        System.out.println(PredictTheWinner(new int[]{
-                3606449, 6, 5, 9, 452429, 7, 9580316, 9857582, 8514433, 9, 6, 6614512, 753594, 5474165, 4, 2697293, 8, 7, 1}));
+        PredictTheWinner pw = new PredictTheWinner();
+        System.out.println(pw.PredictTheWinnerDP(new int[]{
+                1, 5, 2}));
     }
 
 

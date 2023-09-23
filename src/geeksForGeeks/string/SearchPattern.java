@@ -2,7 +2,7 @@ package geeksForGeeks.string;
 
 import java.util.ArrayList;
 
-public class SearchPattern {
+public class SearchPattern { //not working
     public static int[] buildLPSArray(String pattern) {
         int patLen = 0;
         int i = 1;

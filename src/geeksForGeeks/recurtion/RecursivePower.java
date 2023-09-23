@@ -8,7 +8,7 @@ public class RecursivePower {
         return n * RecursivePower(n, p - 1);
     }
 
-    static int RecursiveFastPower(int n, int p) {
+    static int fastPower(int n, int p) {
         int res = 1;
         while (p != 0) {
             if ((p & 1) != 0) {

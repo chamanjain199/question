@@ -10,6 +10,9 @@ public class DeleteWithoutHeadPointer {
         del.next = null;
     }
 
+    protected  String name="kaka";
+
+
     public static void main(String[] args) {
 
     }

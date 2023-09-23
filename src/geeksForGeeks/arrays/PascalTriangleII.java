@@ -15,7 +15,10 @@ public class PascalTriangleII {
         ans.add(1);
         long temp = 1;
         for (int i = 0; i < rowIndex; i++) {
+            System.out.print(" "+temp+ " ");
             temp = temp * (rowIndex - i) / (i + 1);
+            System.out.print( (rowIndex - i) + " " + (i + 1)+" ::  "+temp );
+            System.out.println();
             ans.add((int) temp);
         }
         return ans;
@@ -62,6 +65,6 @@ public class PascalTriangleII {
 
 
     public static void main(String[] args) {
-        System.out.println(getRowOptimal(6));
+        System.out.println(getRowOptimal(4));
     }
 }

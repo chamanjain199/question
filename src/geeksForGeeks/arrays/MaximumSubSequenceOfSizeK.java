@@ -3,16 +3,6 @@ package geeksForGeeks.arrays;
 import java.util.ArrayList;
 
 public class MaximumSubSequenceOfSizeK {
-    public static int[] maxSubsequence(int[] nums, int k) {
-        int len = nums.length;
-        int maxSum = 0;
-        for (int i = 0; i < nums.length; i++) {
-            // while ()
-
-        }
-
-        return null;
-    }
 
     public static int maxSumSubsequence(int[] nums, int k) {
         int len = nums.length;

@@ -13,6 +13,10 @@ public class Main {
         System.out.println(Arrays.toString(min.minimuns));
         System.out.println(min.min());
 
+        String when="today + 2 and + 3 day + man";
+        int index=when.indexOf('+',when.indexOf('+')+1);
+        when=when.substring(0,index);
+        System.out.println(when);
 
     }
 }

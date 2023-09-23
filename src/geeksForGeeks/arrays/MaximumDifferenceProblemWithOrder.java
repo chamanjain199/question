@@ -9,7 +9,9 @@ public class MaximumDifferenceProblemWithOrder {
             minValue = Math.min(minValue, a[i]);
         }
         return rel;
+
     }
+
 
 
 

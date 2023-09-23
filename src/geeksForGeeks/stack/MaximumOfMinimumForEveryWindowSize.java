@@ -24,11 +24,11 @@ public class MaximumOfMinimumForEveryWindowSize {
             ans[i] = Math.max(ans[i], ans[i + 1]);
         }
         return ans;
-
     }
 
     public static void main(String[] args) {
-        int arr[] = new int[]{10, 20, 30, 50, 10, 70, 30};
+
+        int arr[] = new int[]{100, 20, 10, 50, 10, 70, 30};
         System.out.println(Arrays.toString(maxOfMin(arr, arr.length)));
     }
 }

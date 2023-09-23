@@ -3,8 +3,8 @@ package geeksForGeeks.string;
 public class MinimumCharactersToBeAddedAtFrontToMakeStringPalindrome {
     public static int minChar(String str) {
         StringBuilder sb = new StringBuilder(str);
-        sb.append("$");
         sb.append(new StringBuffer(str).reverse());
+        System.out.println(sb);
         int[] lpaArray = buildLPSArray(sb.toString());
         return str.length() - lpaArray[lpaArray.length - 1];
     }
@@ -31,6 +31,6 @@ public class MinimumCharactersToBeAddedAtFrontToMakeStringPalindrome {
     }
 
     public static void main(String[] args) {
-        System.out.println(minChar("aacacaaa"));
+        System.out.println(minChar("abad"));
     }
 }

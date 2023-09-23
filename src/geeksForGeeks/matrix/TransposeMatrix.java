@@ -1,4 +1,4 @@
-package geeksForGeeks.bitmanipulation;
+package geeksForGeeks.matrix;
 
 import java.util.Arrays;
 
@@ -15,8 +15,6 @@ public class TransposeMatrix {
     }
 
     public static void main(String[] args) {
-        byte b=(byte) 256;
-        System.out.println(b);
     System.out.println(Arrays.deepToString(transpose(new int[][]{{1, 2, 3}, {4, 5, 6}})));
     }
 }

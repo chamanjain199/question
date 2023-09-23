@@ -18,7 +18,5 @@ public class DetectCycle {
             }
         }
         return null;
-
-
     }
 }

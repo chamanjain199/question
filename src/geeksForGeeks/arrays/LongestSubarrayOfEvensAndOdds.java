@@ -13,10 +13,8 @@ public class LongestSubarrayOfEvensAndOdds {
             }
             isPreEven = isCurrentEven;
             count++;
-
         }
         maxAns = Math.max(count, maxAns);
-
         return maxAns;
     }
 

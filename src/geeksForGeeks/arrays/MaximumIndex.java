@@ -1,5 +1,7 @@
 package geeksForGeeks.arrays;
 
+import java.util.Arrays;
+
 public class MaximumIndex {
     static int maxIndexDiff(int A[], int N) {
 
@@ -15,7 +17,6 @@ public class MaximumIndex {
         int i = 0;
         int j = 0;
         while (i < N && j < N) {
-
             if (lmin[i] <= Rmax[j]) {
                 maxDis = Math.max(maxDis, j - i);
                 j++;

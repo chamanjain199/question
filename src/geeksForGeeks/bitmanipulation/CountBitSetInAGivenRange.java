@@ -1,6 +1,7 @@
 package geeksForGeeks.bitmanipulation;
 
 public class CountBitSetInAGivenRange {
+    //https://practice.geeksforgeeks.org/problems/count-total-set-bits-1587115620/1
     public static int countSetBits(int n) {
         if (n <= 0) {
             return 0;

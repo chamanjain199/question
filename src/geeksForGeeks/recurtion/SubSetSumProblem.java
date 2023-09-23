@@ -26,7 +26,7 @@ public class SubSetSumProblem {
         }
         return totalSubSetWithSum2(arr, sum, index + 1) + totalSubSetWithSum2(arr, sum - arr[index], index + 1);
     }
-
+//https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/
     public static int totalSubSetWithSum3(int arr[], int sum, int index, int min, int max) {
         if (index == arr.length) {
             int mySum = min + max;

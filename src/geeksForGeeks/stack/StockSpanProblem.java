@@ -15,7 +15,7 @@ public class StockSpanProblem {
 
     public static int[] calculateSpan(int price[], int n) {
         Stack<Integer> stackSpan = new Stack<>();
-        int ans[] = new int[n];
+        int[] ans = new int[n];
         for (int i = 0; i < n; i++) {
 
             while (!stackSpan.isEmpty() && price[stackSpan.peek()] < price[i]) stackSpan.pop();

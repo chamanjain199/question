@@ -63,7 +63,7 @@ public class SubsequencesOfArray {
         }
         for (int i = level; i < arr.length; i++) {
             list.add(arr[i]);
-            allSubSequenceOfArrayWithGivenSum2(arr, i + 1, list, sum + arr[i], givenSum);
+            allSubSequenceOfArrayWithGivenSum3(arr, i + 1, list, sum + arr[i], givenSum);
             list.remove(list.size() - 1);
         }
 

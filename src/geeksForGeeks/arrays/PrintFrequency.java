@@ -13,9 +13,6 @@ public class PrintFrequency {
             freq = 1;
 
         }
-//        if (n == 1 || arr[n - 2] != arr[n - 1]) {
-//            System.out.println(arr[n - 1] + " " + freq);
-//        }
     }
 
     public static void main(String[] args) {

@@ -16,26 +16,26 @@ public class LeftmostRepeatingCharacter {
                 ans = Math.min(arr[index], ans);
             }
         }
-        return s.charAt(ans) + "";
+        return String.valueOf(s.charAt(ans));
     }
 
-    static String firstRepChar2(String s) {
-        int len = s.length();
-        boolean arr[] = new boolean[26];
-        int ans = -1;
-        for (int i = len - 1; i > 0; i++) {
-            int index = s.charAt(i) - 'a';
+    static char firstRepChar2(String S) {
+        int n = S.length();
+        boolean[] arr = new boolean[26];
+        int index;
+        int ans = n + 1;
+        for (int i = n - 1; i >= 0; i--) {
+            index = S.charAt(i) - 'a';
             if (arr[index]) {
-                arr[index] = true;
-            } else {
                 ans = i;
+            } else {
+                arr[index] = true;
             }
-
         }
-        return s.charAt(ans) + "";
+        return ans==(n+1)?'#':S.charAt(ans);
     }
 
     public static void main(String[] args) {
-        System.out.println(firstRepChar("geeksforgeeks"));
+        System.out.println(firstRepChar2("geeksforgeeks"));
     }
 }

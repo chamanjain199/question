@@ -1,5 +1,7 @@
 package geeksForGeeks.bitmanipulation;
 
+import revision.arrays.Solution;
+
 public class PowerOfFour {
     public static boolean isPowerOfFour(int n) {
         if (n <= 0) {
@@ -9,6 +11,7 @@ public class PowerOfFour {
 
         int shift = 1;
         for (int i = 0; i < 16; i++) {
+
             if ((n & shift) == n) {
                 return true;
             }

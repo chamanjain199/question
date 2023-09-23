@@ -8,19 +8,17 @@ public class PascalTriangle {
         List<List<Integer>> ans = new ArrayList<>();
         ans.add(List.of(1));
         if (numRows == 1) {
-           return ans;
+            return ans;
         }
-        for (int row = 2; row <=numRows; row++) {
-            List<Integer> newRow = new ArrayList<>();
-            List<Integer> prevRow = ans.get(row - 2);
-            for (int i = 0; i < row; i++) {
-                if (i == 0 || i == row - 1) {
-                    newRow.add(1);
-                } else {
-                    newRow.add(prevRow.get(i - 1) + prevRow.get(i));
-                }
+        for (int i = 1; i < numRows; i++) {
+            List<Integer> row = new ArrayList<>();
+            List<Integer> prevRow = ans.get(i - 1);
+            row.add(1);
+            for (int j = 1; j < i; j++) {
+                row.add(prevRow.get(j-1)+prevRow.get(j));
             }
-            ans.add(newRow);
+            row.add(1);
+            ans.add(row);
         }
         return ans;
 

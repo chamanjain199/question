@@ -25,6 +25,6 @@ public class LengthOfTheLongestSubstring {
     }
 
     public static void main(String[] args) {
-        System.out.println(longestUniqueSubsttr("geeksforgeeks"));
+        System.out.println(longestUniqueSubsttr("aabbcc"));
     }
 }

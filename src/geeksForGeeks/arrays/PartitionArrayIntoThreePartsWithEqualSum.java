@@ -1,8 +1,5 @@
 package geeksForGeeks.arrays;
 
-import java.util.HashMap;
-import java.util.Map;
-
 //https://leetcode.com/problems/partition-array-into-three-parts-with-equal-sum/
 public class PartitionArrayIntoThreePartsWithEqualSum {
 
@@ -27,8 +24,9 @@ public class PartitionArrayIntoThreePartsWithEqualSum {
                 if (requiredSum == 0 && count == 3) {
                     return true;
                 }
-                requiredSum += requiredSum ;
-            }        }
+                requiredSum += requiredSum;
+            }
+        }
         return false;
     }
 

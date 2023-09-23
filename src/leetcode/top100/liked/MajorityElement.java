@@ -27,6 +27,7 @@ public class MajorityElement {
                 count--;
                 if (count == 0) {
                     majorityElement = nums[i];
+                    count = 1;
                 }
             }
 

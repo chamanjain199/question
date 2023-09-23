@@ -2,50 +2,49 @@ package geeksForGeeks.stack;
 
 import java.util.Stack;
 
-public class InfixToPostfix {
+public class  InfixToPostfix {
     public static String infixToPostfix(String exp) {
-        StringBuilder stringBuilder = new StringBuilder();
-        Stack<Character> stack = new Stack<>();
-        int len = exp.length();
-        for (int i = 0; i < len; i++) {
-            char ch = exp.charAt(i);
-            if (ch == '(') {
-                stack.push(ch);
-            } else if (ch == '+' || ch == '-') {
-                if (!stack.isEmpty() && stack.peek() != '(') {
+            Stack<Character> stack = new Stack<>();
+            StringBuilder sb = new StringBuilder();
+            char[] chars = exp.toCharArray();
+            int len = chars.length;
+            for (int i = 0; i < len; i++) {
+                char c = chars[i];
+                if (c == '(') {
+                    stack.push(c);
+                } else if (c == '+' || c == '-') {
                     while (!stack.isEmpty() && (stack.peek() == '*' || stack.peek() == '/' || stack.peek() == '^')) {
-                        stringBuilder.append(stack.pop());
+                        sb.append(stack.pop());
                     }
                     if (!stack.isEmpty() && (stack.peek() == '+' || stack.peek() == '-')) {
-                        stringBuilder.append(stack.pop());
+                        sb.append(stack.pop());
                     }
-                }
-                stack.push(ch);
-            } else if (ch == '*' || ch == '/') {
-                if (!stack.isEmpty() && stack.peek() != '(') {
-                    if (stack.peek() == '*' || stack.peek() == '/' || stack.peek() == '^') {
-                        stringBuilder.append(stack.pop());
+                    stack.push(c);
+
+                } else if (c == '*' || c == '/') {
+                    if (!stack.isEmpty()  && (stack.peek() == '*' || stack.peek() == '/' || stack.peek() == '^')) {
+                        sb.append(stack.pop());
                     }
+                    stack.push(c);
+                } else if (c == '^') {
+                    if (!stack.isEmpty() && stack.peek() == '^') {
+                        sb.append(stack.pop());
+                    }
+                    stack.push(c);
+                } else if (c == ')') {
+                    while (!stack.isEmpty() && stack.peek() != '(') {
+                        sb.append(stack.pop());
+                    }
+                    if (!stack.isEmpty()) stack.pop();
+                }else{
+                    sb.append(c);
                 }
-                stack.push(ch);
-            } else if (ch == '^') {
-                if (!stack.isEmpty() && stack.peek() == '^') {
-                    stringBuilder.append(stack.pop());
-                }
-                stack.push(ch);
-            } else if (ch == ')') {
-                while (!stack.isEmpty() && stack.peek() != '(') {
-                    stringBuilder.append(stack.pop());
-                }
-                if (!stack.isEmpty()) stack.pop();
-            } else {
-                stringBuilder.append(ch);
             }
-        }
-        while (!stack.isEmpty()) {
-            stringBuilder.append(stack.pop());
-        }
-        return stringBuilder.toString();
+            while (!stack.isEmpty()) {
+                sb.append(stack.pop());
+            }
+            return sb.toString();
+
     }
 
     public static void main(String[] args) {

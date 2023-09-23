@@ -17,7 +17,6 @@ public class SortAStack {
             }
         }
         return sorted;
-
     }
 
     public static void main(String[] args) {

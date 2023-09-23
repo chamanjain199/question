@@ -35,7 +35,6 @@ public class BitwiseANDOfNumbersRange {
             if(isSet){
                 result|=1<<i;
             }
-
         }
         return result;
     }

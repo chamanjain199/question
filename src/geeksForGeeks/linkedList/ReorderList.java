@@ -27,7 +27,7 @@ public class ReorderList {
             }
             res = res.next;
         }
-        res.next=head!=null?head:secondHalf;
+        res.next = head != null ? head : secondHalf;
         return newHead.next;
     }
 
@@ -43,6 +43,12 @@ public class ReorderList {
         return currentNode;
     }
 
+    public static void print(Node node) {
+        if (node != null) {
+            System.out.println(node.data);
+            print(node.next);
+        }
+    }
 
     public static void main(String[] args) {
         Node n = new Node(1);
@@ -52,6 +58,6 @@ public class ReorderList {
         n.next.next.next.next = new Node(5);
 
         Node r = reorderlist(n);
-        System.out.println(r);
+        print(r);
     }
 }

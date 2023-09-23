@@ -24,7 +24,7 @@ public class MaxSubArray {
             total += nums[i];
             nums[i] = (-nums[i]);
         }
-        int minSubArray = maxSubArray(nums);
+        int minSubArray = maxSubArray(nums); // ideally it should be in negative
         //total + minSubArray == total - (- minSubArray)) since minSubArray is return by negatation so it is in positive
         return Math.max(maxSubArray, total + minSubArray);
 

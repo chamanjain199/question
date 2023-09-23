@@ -1,5 +1,7 @@
 package geeksForGeeks.math;
 
+import geeksForGeeks.linkedList.DeleteWithoutHeadPointer;
+
 class Tuple {
     int number;
     int step;
@@ -10,7 +12,9 @@ class Tuple {
     }
 }
 
-public class ReachANumber {
+public class ReachANumber  extends DeleteWithoutHeadPointer  {
+
+
     public static int reachNumber(int target) {
         if (target < 0) {
             target = -target;
@@ -30,5 +34,6 @@ public class ReachANumber {
 
     public static void main(String[] args) {
         System.out.println(reachNumber(2));
+        DeleteWithoutHeadPointer obj=new DeleteWithoutHeadPointer();
     }
 }

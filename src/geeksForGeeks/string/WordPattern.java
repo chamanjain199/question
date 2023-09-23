@@ -22,8 +22,6 @@ public class WordPattern {
             } else if (!preMap.equals(arr[i])) {
                 return false;
             }
-
-
         }
         return true;
     }

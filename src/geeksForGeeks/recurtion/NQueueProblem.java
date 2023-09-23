@@ -19,12 +19,12 @@ public class NQueueProblem {
         for (int i = 0; i < n; i++) {
             Arrays.fill(chars[i], '.');
         }
-        solveNQueensRec(results, chars, n, 0);
+        solveNQueensRec(chars, n, 0);
 
         return results;
     }
 
-    public void solveNQueensRec(List<List<String>> lists, char[][] blocks, int n, int row) {
+    public void solveNQueensRec(char[][] blocks, int n, int row) {
 
         if (n == row) {
             System.out.println(Arrays.deepToString(blocks));
@@ -33,22 +33,28 @@ public class NQueueProblem {
         }
 
         for (int col = 0; col < n; col++) {
-            if (isSafeToPlace(blocks, row, col,n)) {
+            System.out.print("ROW "+row+" COL "+col+" \n ");
+            if (isSafeToPlace(row, col,n)) {
+                System.out.println(" IN ");
                 blocks[row][col] = 'Q';
                 blockedCols[col] = true;
                 blockedDiagonal1[row + col] = true;
-                blockedDiagonal2[n + row - col] = true;
-                solveNQueensRec(lists, blocks, n, row + 1);
+                blockedDiagonal2[n + row - col] = true;  //dot have any array to block row because, once a queen pl
+                // aced in a row we
+                                                          // are changing row
+                solveNQueensRec(blocks, n, row + 1);
                 blockedCols[col] = false;
                 blockedDiagonal1[row + col] = false;
                 blockedDiagonal2[n + row - col] = false;
                 blocks[row][col] = '.';
             }
+
         }
+        System.out.println();
 
     }
 
-    private boolean isSafeToPlace(char[][] blocks, int row, int col,int n) {
+    private boolean isSafeToPlace(int row, int col, int n) {
 //        for (int i = row - 1; i >= 0; i--) {
 //            if (blocks[i][col] == 'Q') {
 //                return false;

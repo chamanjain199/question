@@ -1,8 +1,22 @@
 package geeksForGeeks.arrays;
 
 import java.util.Arrays;
+
 //Dividend = Divisor x Quotient + Remainder
 public class RearrangeArrayAlternately {
+    public static void rearrangeSimple(long arr[], int n) {
+        long[] temp = new long[n];
+        int i = 0;
+        int j = n - 1;
+        int k = 0;
+        while (i <= j) {
+            temp[k] = (k & 1) == 0 ? arr[j--] : arr[i++];
+            k++;
+        }
+        System.arraycopy(temp, 0, arr, 0, n);
+    }
+
+
     public static void rearrange(long arr[], int n) {
         int maxIndex = n - 1;
         int minIndex = 0;
@@ -19,6 +33,7 @@ public class RearrangeArrayAlternately {
         }
     }
 
+
     public static void rearrangeNextQuestionSol(long arr[], int n) {
         long quotient = n;
         for (int i = 0; i < n; i++) {
@@ -34,7 +49,7 @@ public class RearrangeArrayAlternately {
         rearrange(arr, 6);
 
         System.out.println(Arrays.toString(arr));
-       arr = new long[]{1, 2, 3, 4, 5, 6};
+        arr = new long[]{1, 2, 3, 4, 5, 6};
         rearrangeNextQuestionSol(arr, 6);
         System.out.println(Arrays.toString(arr));
 

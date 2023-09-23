@@ -26,7 +26,7 @@ public class PossibleWordsFromPhoneDigits {
             generatePossibleWords(result, a, N, sb, level + 1);
             sb.deleteCharAt(sb.length() - 1);
         }
-
+       
     }
 
     public static void main(String[] args) {
